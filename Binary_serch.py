@@ -28,7 +28,7 @@ def binary_search(arr, target):
             
         # If target is smaller, ignore right half
         else:
-            first = midpoint -1
+            last = midpoint -1
     return None
 
 def verify(index):

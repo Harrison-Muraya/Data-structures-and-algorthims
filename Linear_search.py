@@ -1,12 +1,9 @@
 """
-Perform a linear search for a target value in an array.
+Perform a Binary search for a target value in an array.
+:param arr: List of sorted elements
+:param target: Value to search for
+:return: Index of target in arr if found, otherwise -1
 
-Parameters:
-arr (list): The list to search through.
-target: The value to search for.
-
-Returns:
-int: The index of the target value if found, otherwise None.
 """
 
 #Linear Search
