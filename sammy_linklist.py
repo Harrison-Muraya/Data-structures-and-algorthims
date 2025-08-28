@@ -21,12 +21,22 @@ class Linked_list:
             current = current.next_node
         return count
     
-    def add(self, data):
-        new_node = Node(data)
-        new_node.next_node = self.head
-        self.head = new_node
+    def append(self, data):
+        if self.head is None:
+            self.head = Node(data)
+        else:
+            last = self.head
 
-
+            while last.next_node:
+                last = last.next_node
+            last.next_node = Node(data)
+    
+    def prepend(self, data):
+        first_node = Node(data)
+        first_node.next_node = self.head
+        self.head = first_node
+    
+   
     def __repr__(self):
 
         node = []
@@ -34,21 +44,25 @@ class Linked_list:
 
         while current:
             if current == self.head:
-                node.append('head: %s' % current.data)
+                node.append('[head: %s]' % current.data)
             elif current.next_node is None:
-                node.append('tail: %s' % current.data)
+                node.append('[tail: %s]' % current.data)
             else:
-                node.append('%s' % current.data)
+                node.append('[%s]' % current.data)
             current = current.next_node
         return '->'.join(node)
 
 
 
 l = Linked_list()
-l.add(11)
-l.add(20)
-l.add(90)
-l.add(110)
+l.append(11)
+l.append(20)
+l.append(90)
+l.append(110)
 print("Is Empty: ", l.isEmpty())
 print("list size: ", l.size())
-print(l)
+print("befor append:", l)
+l.append(200)
+print("after append:", l)
+l.prepend(300)
+print("after prepend", l)
