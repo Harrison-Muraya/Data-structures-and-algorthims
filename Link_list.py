@@ -22,6 +22,7 @@ class Link_list:
 
         while current:
             count +=1
+            current = current.next_node
         
         return count
 
