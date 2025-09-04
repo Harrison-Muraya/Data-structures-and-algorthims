@@ -1,3 +1,4 @@
+
 class Node:
     data = None
     next_node = None
@@ -51,6 +52,30 @@ class LinkedList:
                 else: 
                     current = current.next_node
             return None
+        
+    
+    def remove(self, node):
+        current = self.head
+        found = False
+        previous = None
+
+        while current and not found:
+            if current.data == node and current is self.head:
+                found = True
+                self.head = current.next_node
+
+            elif current.data == node:
+                found = True
+                previous.next_node = current.next_node
+            
+            else:
+                previous = current
+                current = current.next_node
+        return current.data
+
+
+
+
 
     def __repr__(self):
         nodes = []
@@ -76,16 +101,17 @@ l.preappend(40)
 l.preappend(150)
 l.preappend(106)
 print(l.isEmpty())
-# print(f"after Preappending: {l.size()} {l}")
-# l.append(90)
-# print(f"after appending: {l.size()} {l}")
-# l.append(890)
-# print(f"after appending: {l.size()} {l}")
-# l.append(900)
-# print(f"after appending: {l.size()} {l}")
-print(l)
+print(f"after Preappending: {l.size()} {l}")
+l.append(90)
+print(f"after appending: {l.size()} {l}")
+l.append(890)
+print(f"after appending: {l.size()} {l}")
+l.append(900)
+print(f"after appending: {l.size()} {l}")
 print(l.search(90))
 print(l.search(9000))
+print(f"size {l.size()}")
 
-
-
+print(f"Removing 40: {l.remove(40)}")
+print(f"size {l.size()}")
+print(l)
