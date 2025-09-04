@@ -36,3 +36,11 @@ def merge(left, right):
     while j < len(right):
         result.append(right[j])
         j += 1
+
+    return result
+
+num = [8,4,5,1,3,2,6,7,1]
+
+result = merge_sort(num)
+
+print(result)
