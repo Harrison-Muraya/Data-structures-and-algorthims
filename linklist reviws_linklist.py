@@ -64,6 +64,7 @@ class LinkedList:
             else:
                 nodes.append('[%s]' % current.data)
             current = current.next_node
+        # return f" {nodes} "
         return '->'.join(nodes)
     
 l = LinkedList()
@@ -75,14 +76,14 @@ l.preappend(40)
 l.preappend(150)
 l.preappend(106)
 print(l.isEmpty())
-print(f"after Preappending: {l.size()} {l}")
-l.append(90)
-print(f"after appending: {l.size()} {l}")
-l.append(890)
-print(f"after appending: {l.size()} {l}")
-l.append(900)
-print(f"after appending: {l.size()} {l}")
-
+# print(f"after Preappending: {l.size()} {l}")
+# l.append(90)
+# print(f"after appending: {l.size()} {l}")
+# l.append(890)
+# print(f"after appending: {l.size()} {l}")
+# l.append(900)
+# print(f"after appending: {l.size()} {l}")
+print(l)
 print(l.search(90))
 print(l.search(9000))
 
