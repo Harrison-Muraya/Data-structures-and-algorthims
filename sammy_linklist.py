@@ -55,6 +55,30 @@ class Linked_list:
                 else:
                     current = current.next_node
             return False
+        
+    def remove(self, node):
+        if self.isEmpty():
+            return "linked list is Empty"
+        else:
+
+            current = self.head
+            previous = None
+            found = False
+
+            while current and not found:
+                if current == self.head and current.data == node:
+                    found = True
+                    self.head = current.next_node
+                elif current.data == node:
+                    found = True
+                    previous.next_node = current.next_node
+                else:
+                    previous = current
+                    current = current.next_node
+            return current.data
+
+
+
 
 
     
