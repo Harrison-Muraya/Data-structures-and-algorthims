@@ -42,6 +42,20 @@ class Linked_list:
 
             last.next_node = new_node
 
+    def search(self, value):
+        if self.isEmpty():
+            return "linked list is Empty"
+        else:
+            current = self.head
+            found = False
+
+            while current:
+                if current.data == value:
+                    return True
+                else:
+                    current = current.next_node
+            return False
+
 
     
     def __repr__(self):
@@ -73,3 +87,5 @@ l.append(120)
 print(f"is Empty: {l.isEmpty()}")
 print(f"size: {l.size()}")
 print(l)
+print(f"search: {l.search(57)}")
+print(f"search: {l.search(77)}")
