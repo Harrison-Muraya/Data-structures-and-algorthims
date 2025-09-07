@@ -73,6 +73,18 @@ class LinkedList:
                 current = current.next_node
         return current.data
 
+    def dataAtIndex(self, index):
+        if index > self.size():
+            return "Index out of Bound"
+        else:
+            current = self.head
+            count = 0
+            while current:
+                if count == index:
+                    return current.data
+                else:
+                    current = current.next_node
+                    count += 1
 
 
 
@@ -115,3 +127,7 @@ print(f"size {l.size()}")
 print(f"Removing 40: {l.remove(40)}")
 print(f"size {l.size()}")
 print(l)
+
+print(f"Data at Index: {l.dataAtIndex(6)}")
+print(f"Data at Index: {l.dataAtIndex(7)}")
+print(f"Data at Index: {l.dataAtIndex(8)}")
