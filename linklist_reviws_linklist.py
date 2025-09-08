@@ -81,7 +81,7 @@ class LinkedList:
             count = 0
             while current:
                 if count == index:
-                    return current.data
+                    return current
                 else:
                     current = current.next_node
                     count += 1
@@ -104,30 +104,30 @@ class LinkedList:
         # return f" {nodes} "
         return '->'.join(nodes)
     
-l = LinkedList()
-print(l.isEmpty())
-print(l.search(90))
-l.preappend(10)
-l.preappend(30)
-l.preappend(40)
-l.preappend(150)
-l.preappend(106)
-print(l.isEmpty())
-print(f"after Preappending: {l.size()} {l}")
-l.append(90)
-print(f"after appending: {l.size()} {l}")
-l.append(890)
-print(f"after appending: {l.size()} {l}")
-l.append(900)
-print(f"after appending: {l.size()} {l}")
-print(l.search(90))
-print(l.search(9000))
-print(f"size {l.size()}")
+# l = LinkedList()
+# print(l.isEmpty())
+# print(l.search(90))
+# l.preappend(10)
+# l.preappend(30)
+# l.preappend(40)
+# l.preappend(150)
+# l.preappend(106)
+# print(l.isEmpty())
+# print(f"after Preappending: {l.size()} {l}")
+# l.append(90)
+# print(f"after appending: {l.size()} {l}")
+# l.append(890)
+# print(f"after appending: {l.size()} {l}")
+# l.append(900)
+# print(f"after appending: {l.size()} {l}")
+# print(l.search(90))
+# print(l.search(9000))
+# print(f"size {l.size()}")
 
-print(f"Removing 40: {l.remove(40)}")
-print(f"size {l.size()}")
-print(l)
+# print(f"Removing 40: {l.remove(40)}")
+# print(f"size {l.size()}")
+# print(l)
 
-print(f"Data at Index: {l.dataAtIndex(6)}")
-print(f"Data at Index: {l.dataAtIndex(7)}")
-print(f"Data at Index: {l.dataAtIndex(8)}")
+# print(f"Data at Index: {l.dataAtIndex(6)}")
+# print(f"Data at Index: {l.dataAtIndex(7)}")
+# print(f"Data at Index: {l.dataAtIndex(8)}")
