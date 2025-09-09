@@ -33,6 +33,17 @@ def split(linked_list):
         right.head = mid_node.next_node
         mid_node.next_node = None
         return left, right
+
+def merge(left, right):
+    merged = LinkedList()
+
+    # fake head
+    merged.preappend(0)
+    current = merged.head
+    left_head = left.head
+    right_head = right.head
+
+    
     
 
 h = LinkedList()
